@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ETCS Test App</string>
+    <string name="no_journeys_yet">Zatím nejsou zaznamenány žádné jízdy</string>
+    <string name="add_new_journey">Přidat novou jízdu</string>
+    <string name="train_number">Číslo vlaku</string>
+    <string name="date">Datum</string>
+    <string name="stations">Stanice</string>
+    <string name="add_station">Přidat stanici</string>
+    <string name="save_journey">Uložit jízdu</string>
+    <string name="station_name">Název stanice</string>
+    <string name="planned_arrival_time">Plánovaný čas příjezdu</string>
+    <string name="add">Přidat</string>
+    <string name="cancel">Zrušit</string>
+    <string name="tests">Testy</string>
+    <string name="test_passed">Prošel</string>
+    <string name="test_failed">Neprošel</string>
+    <string name="reschedule">Přesunout</string>
+    <string name="new_time">Nový čas</string>
+    <string name="take_photo">Pořídit fotografii</string>
+    <string name="test_photo">Fotografie testu</string>
+    <string name="save_result">Uložit výsledek</string>
+    <string name="export_pdf">Exportovat do PDF</string>
+    <string name="no_stations_yet">Zatím nejsou zaznamenány žádné stanice</string>
+    <string name="train_info_format">Vlak: %1$s | Datum: %2$s</string>
+    <string name="select_test">Vybrat test</string>
+    <string name="create_new_test_definition">Vytvořit novou definici testu</string>
+    <string name="test_name">Název testu</string>
+    <string name="test_description">Popis testu</string>
+    <string name="create">Vytvořit</string>
+    <string name="not_tested_yet">Zatím netestováno</string>
+    <string name="rescheduled_to">Přesunuto na: %1$s</string>
+    <string name="planned_time_format">Plánovaný příjezd: %1$s</string>
+    <string name="select_station">Vyberte stanici</string>
+    <string name="test_time">Čas testu</string>
+    <string name="now">Nyní</string>
+    <string name="edit">Upravit</string>
+    <string name="add_test">Přidat test</string>
+</resources>

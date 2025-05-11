@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Sekce pro čas testu -->
+        <LinearLayout
+            android:id="@+id/layout_test_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_time"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_test_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button_add_current_time"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/now" />
+
+                <Button
+                    android:id="@+id/button_edit_time"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Informace o testu -->
+        <TextView
+            android:id="@+id/text_test_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/layout_test_time" />
+
+        <TextView
+            android:id="@+id/text_test_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_test_name" />
+
+        <!-- Radio group pro výsledek testu -->
+        <RadioGroup
+            android:id="@+id/radio_group_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/text_test_description">
+
+            <RadioButton
+                android:id="@+id/radio_pass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/test_passed" />
+
+            <RadioButton
+                android:id="@+id/radio_fail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/test_failed" />
+
+            <RadioButton
+                android:id="@+id/radio_reschedule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reschedule" />
+
+        </RadioGroup>
+
+        <!-- Layout pro přesunutí testu -->
+        <LinearLayout
+            android:id="@+id/layout_reschedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_result">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_time"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_reschedule_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="none" />
+
+        </LinearLayout>
+
+        <!-- Tlačítko pro pořízení fotografie -->
+        <Button
+            android:id="@+id/button_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/take_photo"
+            app:layout_constraintTop_toBottomOf="@id/layout_reschedule" />
+
+        <!-- Náhled fotografie -->
+        <ImageView
+            android:id="@+id/image_test_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/test_photo"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/button_take_photo" />
+
+        <!-- Tlačítko pro uložení výsledku -->
+        <Button
+            android:id="@+id/button_save_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/save_result"
+            app:layout_constraintTop_toBottomOf="@id/image_test_photo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
